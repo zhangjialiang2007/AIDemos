@@ -3,13 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "http-server -o",
+    "dev": "webpack --config ./package/webpack.dev.config.js",
+    "build": "webpack --config ./package/webpack.min.config.js",
+    "serve": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "http-server": "^14.1.1"
-  }
+    "html-webpack-plugin": "^5.6.4",
+    "http-server": "^14.1.1",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0"
+  },
+  "keywords": [],
+  "description": ""
 }

@@ -39,12 +39,14 @@ class Utils {
     return {
       dense1: tf.variable(tf.randomNormal([dModel, dff])),
       dense2: tf.variable(tf.randomNormal([dff, dModel])),
-      call: (x) => tf.tidy(() => {
-        x = tf.matMul(x, this.dense1);
-        x = tf.relu(x);
-        x = tf.matMul(x, this.dense2);
-        return x;
-      })
+      call: function(x) {
+        return tf.tidy(() => {
+          x = tf.matMul(x, this.dense1);
+          x = tf.relu(x);
+          x = tf.matMul(x, this.dense2);
+          return x;
+        })
+      }
     };
   }
 }

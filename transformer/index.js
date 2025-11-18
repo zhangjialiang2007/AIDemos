@@ -1,4 +1,7 @@
-import { Transformer } from './transformer.js'
-import {demo} from './demo.js'
+export { Transformer } from './transformer.js'
+export { demo as TransformerDemo} from './demo.js'
 
-export {Transformer, demo}
+
+/**
+ * @namespace TRANSFORMER
+ */
